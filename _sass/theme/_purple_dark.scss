@@ -68,19 +68,21 @@ body {
 
 body {
   background:
+    radial-gradient(
+      circle at 15% 0%,
+      rgba(187, 134, 252, 0.10),
+      transparent 35%
+    ),
     linear-gradient(
       180deg,
-      #211332 0%,
-      #160d23 35%,
-      #100b18 75%,
+      #181020 0%,
+      #100b18 55%,
       #0b0710 100%
     ) !important;
 
   background-attachment: fixed !important;
-
-  color: $text !important;
+  color: #eeeaf4 !important;
 }
-
 
 /* ==========================================================================
    MAIN STRUCTURAL AREAS
