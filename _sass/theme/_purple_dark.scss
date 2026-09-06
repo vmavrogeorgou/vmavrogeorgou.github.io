@@ -1,0 +1,60 @@
+/* ==========================================================================
+   Custom Dark Purple Theme Skin
+   ========================================================================== */
+
+/* Dark Mode Theme Colors */
+$main-color:        #120c1f !default; /* Deep Obsidian Violet background base */
+$primary-color:     #bb86fc !default; /* Vibrant Neon Lilac for main accents/headings */
+$text-color:        #e0e0e0 !default; /* Soft crisp off-white for body text readability */
+$inverse-text-color:#120c1f !default;
+$link-color:        #da70d6 !default; /* Orchid Purple for hyperlinks */
+$link-color-hover:  #ffb7ff !default; /* Bright pastel pinkish-lilac on hover */
+
+/* Border & Component Colors */
+$border-color:      #2d1f47 !default; /* Muted dark purple borders */
+$masthead-link-color: $text-color !default;
+$masthead-link-color-hover: $primary-color !default;
+
+/* INJECT VERTICAL DARK GRADIENT BACKGROUND */
+body {
+  background: linear-gradient(to bottom, #160f24 0%, #0d0814 100%) !important;
+  background-attachment: fixed !important;
+  color: $text-color !important;
+}
+
+/* Ensure background containers blend into the dark gradient */
+.page__content, .sidebar, .archive, .wrapper, .masthead {
+  background: transparent !important;
+  color: $text-color !important;
+}
+
+/* Fix global headings to use your neon accent color */
+h1, h2, h3, h4, h5, h6, .sidebar__user-name, .author__name {
+  color: #bb86fc !important;
+}
+
+/* Dark Footer Styling */
+.page__footer {
+  background-color: #09050e !important;
+  color: #a093b1 !important;
+  border-top: 1px solid #2d1f47 !important;
+  
+  a {
+    color: #bb86fc !important;
+    &:hover { color: #ffb7ff !important; }
+  }
+}
+
+/* Subtle accent background for blockquotes / code blocks */
+code, pre, blockquote {
+  background-color: #1d1430 !important;
+  border: 1px solid #3c2b5c !important;
+  color: #e0e0e0 !important;
+}
+
+/* Changes the active page highlight item in the header navigation menu */
+.masthead__menu-item--active a,
+.masthead__menu-item a:hover {
+  color: #bb86fc !important;
+  border-bottom: 2px solid #da70d6 !important;
+}
