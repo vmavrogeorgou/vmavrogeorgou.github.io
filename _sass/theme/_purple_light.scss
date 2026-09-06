@@ -1,37 +1,74 @@
 /* ==========================================================================
-   Custom Purple Theme Skin
+  PURPLE THEME - LIGHT GRADIENT VERSION
+  ========================================================================== */
+/* Color codes used for the theme */
+$primary-color              : #7b1fa2; /* Vibrant Purple for main accents */
+$dark-primary-color         : mix(#000, $primary-color, 40%);
+$darker-primary-color       : mix(#000, $primary-color, 60%);
+$light-primary-color        : mix(#fff, $primary-color, 50%);
+$lighter-primary-color      : mix(#fff, $primary-color, 90%);
+$background                 : #e6e6fa; /* Soft Lilac Base */
+$background-light           : #ffffff;
+$background-lighter        : #f3e5f5; /* Very soft pastel lilac */
+$text                      : #212121; /* Off-black text for readability */
+$text-muted                : #4a148c; /* Muted deep violet text */
+$link                      : #7b1fa2; /* Purple links */
+$link-dark                 : #ba55d3; /* Medium Orchid on hover */
+$link-light                : mix(#fff, $link, 25%);
+$footer                    : #f3e5f5; /* Soft pastel lilac footer */
+$border                    : mix(#fff, #212121, 75%);
+$border-dark               : mix(#fff, #212121, 60%);
+
+/* Color codes used for the site */
+$danger-color               : #e74c3c;
+$info-color                 : #7b1fa2;
+$notice-color               : #ba55d3;
+$success-color              : #2ecc71;
+$warning-color              : #f39c12;
+
+/* Other basic settings for the template */
+$border-radius              : 4px;
+$box-shadow                 : 0 1px 1px rgba(0, 0, 0, 0.125);
+$global-transition          : all 0.2s ease-in-out;
+$masthead-height            : 70px;
+$navicon-width              : 28px;
+$navicon-height             : 4px;
+$sidebar-link-max-width     : 250px;
+$sidebar-screen-min-width   : 1024px;
+
+/* Light theme for the site */
+:root {
+  --global-base-color                 : #{$primary-color};
+  --global-bg-color                   : #{$background};
+  --global-footer-bg-color            : #{$footer};
+  --global-border-color               : #{$border};
+  --global-dark-border-color          : #{$border-dark};
+  --global-code-background-color      : #{$background-light};
+  --global-code-text-color            : #{$darker-primary-color};
+  --global-fig-caption-color          : #{$text-muted};
+  --global-link-color                 : #{$link};
+  --global-link-color-hover           : #{$link-dark};
+  --global-link-color-visited         : #{$link-light};
+  --global-masthead-link-color        : #{$text};
+  --global-masthead-link-color-hover  : #{$primary-color};
+  --global-text-color                 : #{$text};
+  --global-text-color-light           : #{$text-muted};
+  --global-thead-color                : #{$lighter-primary-color};
+}
+
+footer {
+  color: #{$text-muted};
+}
+
+/* ==========================================================================
+   VERTICAL GRADIENT INJECTION
    ========================================================================== */
-
-/* Theme Colors */
-$main-color:        #e6e6fa !default; /* Soft Lilac */
-$primary-color:     #7b1fa2 !default; /* Vibrant Purple for main accents */
-$text-color:        #212121 !default;
-$inverse-text-color:#ffffff !default;
-$link-color:        #7b1fa2 !default; /* Purple links */
-$link-color-hover:  #ba55d3 !default;
-
-/* Border & Accent Colors */
-$border-color:      #e1bee7 !default;
-$masthead-link-color: $text-color !default;
-$masthead-link-color-hover: $primary-color !default;
-
-/* INJECT GRADIENT BACKGROUND DIRECTLY INTO THE SKIN */
 body {
   background: linear-gradient(to bottom, #e6e6fa 0%, #ffffff 100%) !important;
   background-attachment: fixed !important;
 }
 
-/* Ensure layouts look seamless on top of the gradient */
-.page__content, .sidebar {
+/* Keeps content containers completely seamless over the background */
+.page__content, .sidebar, .archive, .wrapper, .masthead {
   background: transparent !important;
-}
-
-/* Footer Colors */
-.page__footer {
-  background-color: #f3e5f5 !important;
-  color: #4a148c !important;
-  
-  a {
-    color: #7b1fa2 !important;
-  }
 }
