@@ -23,7 +23,7 @@ repository               : "vmavrogeorgou/vmavrogeorgou.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "profile_pic.png"
   name             : # "Vasiliki Mavrogeorgou"
   pronouns         : # "she/her"  
   bio              : "🏗️ Website under construction"
