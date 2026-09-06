@@ -1,221 +1,117 @@
 /* ==========================================================================
-   CUSTOM DARK PURPLE THEME
+    CUSTOM PURPLE THEME - DARK VERSION
+    ========================================================================== */
+
+/* Color codes used for the theme */
+$primary-color              : #bb86fc;
+$gray                       : #aaa0b8;
+$dark-gray                  : #807688;
+$darker-gray                : #62586a;
+$light-gray                 : #ccc4d4;
+
+$background                 : #100b18;
+$background-light           : #191125;
+$background-lighter         : #211631;
+
+$text                       : #eeeaf4;
+$link                       : #d18cff;
+$link-dark                  : #efb6ff;
+$link-light                 : #ddb0ff;
+
+/* Color codes used for the site */
+$danger-color               : #ee5f5b;
+$info-color                 : #bb86fc;
+$notice-color               : #aaa0b8;
+$success-color              : #62c462;
+$warning-color              : #f89406;
+
+/* Other basic settings for the template */
+$border-radius              : 4px;
+$box-shadow                 : 0 1px 1px rgba(0, 0, 0, 0.5);
+$global-transition          : all 0.2s ease-in-out;
+$masthead-height            : 70px;
+$navicon-width              : 28px;
+$navicon-height             : 4px;
+$sidebar-link-max-width     : 250px;
+$sidebar-screen-min-width   : 1024px;
+
+
+/* ==========================================================================
+   DARK THEME VARIABLES
    ========================================================================== */
-
-/* ---------- Theme colours ---------- */
-
-$primary-color: #bb86fc;
-$dark-primary-color: #8f5cc4;
-$darker-primary-color: #6f429f;
-$light-primary-color: #d7b7ff;
-
-$background: #100b18;
-$background-light: #191125;
-$background-lighter: #211631;
-
-$text: #eeeaf4;
-$text-muted: #aaa0b8;
-
-$link: #d18cff;
-$link-dark: #efb6ff;
-$link-light: #ddb0ff;
-
-$footer: #0a0710;
-
-$border: #30233d;
-$border-dark: #453351;
-
-
-/* ---------- Academic Pages variables ---------- */
 
 html[data-theme="dark"] {
-  --global-base-color: #{$primary-color};
+    --global-base-color                 : #{$primary-color};
 
-  --global-bg-color: #{$background};
+    --global-bg-color                   : #{$background};
+    --global-footer-bg-color            : #0a0710;
 
-  --global-footer-bg-color: #{$footer};
+    --global-border-color               : #30233d;
+    --global-dark-border-color          : #453351;
 
-  --global-border-color: #{$border};
-  --global-dark-border-color: #{$border-dark};
+    --global-code-background-color      : #{$background-light};
+    --global-code-text-color            : #{$text};
 
-  --global-code-background-color: #{$background-light};
-  --global-code-text-color: #{$text};
+    --global-fig-caption-color          : #{$gray};
 
-  --global-fig-caption-color: #{$text-muted};
+    --global-link-color                 : #{$link};
+    --global-link-color-hover           : #{$link-dark};
+    --global-link-color-visited         : #{$link-light};
 
-  --global-link-color: #{$link};
-  --global-link-color-hover: #{$link-dark};
-  --global-link-color-visited: #{$link-light};
+    --global-masthead-link-color        : #{$text};
+    --global-masthead-link-color-hover  : #{$primary-color};
 
-  --global-masthead-link-color: #{$text};
-  --global-masthead-link-color-hover: #{$primary-color};
+    --global-text-color                 : #{$text};
+    --global-text-color-light           : #{$gray};
 
-  --global-text-color: #{$text};
-  --global-text-color-light: #{$text-muted};
-
-  --global-thead-color: #{$background-lighter};
+    --global-thead-color                : #{$background-lighter};
 }
 
 
 /* ==========================================================================
-   PAGE BACKGROUND
+   DARK BACKGROUND
    ========================================================================== */
 
-html,
-body {
-  background: #100b18 !important;
+html[data-theme="dark"],
+html[data-theme="dark"] body {
+    background: #100b18 !important;
 }
 
-body {
-  background:
-    radial-gradient(
-      circle at 15% 0%,
-      rgba(187, 134, 252, 0.10),
-      transparent 35%
-    ),
-    linear-gradient(
-      180deg,
-      #181020 0%,
-      #100b18 55%,
-      #0b0710 100%
-    ) !important;
+html[data-theme="dark"] body {
+    background:
+        radial-gradient(
+            circle at 15% 0%,
+            rgba(187, 134, 252, 0.10),
+            transparent 35%
+        ),
+        linear-gradient(
+            180deg,
+            #181020 0%,
+            #100b18 55%,
+            #0b0710 100%
+        ) !important;
 
-  background-attachment: fixed !important;
-  color: #eeeaf4 !important;
-}
-
-/* ==========================================================================
-   MAIN STRUCTURAL AREAS
-   ========================================================================== */
-
-.page,
-.page__content,
-.sidebar,
-.archive,
-.wrapper {
-  background: transparent !important;
-  color: $text !important;
+    background-attachment: fixed !important;
 }
 
 
 /* ==========================================================================
-   NAVIGATION
+   DARK NAVIGATION
    ========================================================================== */
 
-.masthead {
-  background: rgba(16, 11, 24, 0.92) !important;
-  border-bottom: 1px solid $border !important;
+html[data-theme="dark"] .masthead {
+    background: rgba(16, 11, 24, 0.92) !important;
+    border-bottom: 1px solid #30233d;
 
-  /* Gives the navbar a slight glass effect */
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-}
-
-.masthead__menu-item a {
-  color: $text !important;
-}
-
-.masthead__menu-item a:hover {
-  color: $primary-color !important;
-}
-
-.masthead__menu-item--active a {
-  color: $primary-color !important;
-  border-bottom: 2px solid $primary-color !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 
 /* ==========================================================================
-   HEADINGS
+   DARK FOOTER
    ========================================================================== */
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: $primary-color !important;
-}
-
-
-/* ==========================================================================
-   BODY TEXT
-   ========================================================================== */
-
-body,
-p,
-li,
-.page__content {
-  color: $text !important;
-}
-
-
-/* ==========================================================================
-   LINKS
-   ========================================================================== */
-
-a {
-  color: $link !important;
-
-  &:hover {
-    color: $link-dark !important;
-  }
-}
-
-
-/* ==========================================================================
-   SIDEBAR
-   ========================================================================== */
-
-.sidebar {
-  color: $text !important;
-}
-
-.author__name,
-.sidebar__user-name {
-  color: $primary-color !important;
-}
-
-
-/* ==========================================================================
-   CODE / BLOCKQUOTES
-   ========================================================================== */
-
-code,
-pre,
-blockquote {
-  background: $background-light !important;
-  border: 1px solid $border !important;
-  color: $text !important;
-}
-
-
-/* ==========================================================================
-   TABLES
-   ========================================================================== */
-
-thead {
-  background: $background-lighter !important;
-  color: $text !important;
-}
-
-th,
-td {
-  border-color: $border !important;
-}
-
-
-/* ==========================================================================
-   FOOTER
-   ========================================================================== */
-
-.page__footer {
-  background: $footer !important;
-  color: $text-muted !important;
-  border-top: 1px solid $border !important;
-}
-
-.page__footer a {
-  color: $link !important;
+html[data-theme="dark"] .page__footer {
+    background: #0a0710 !important;
 }
