@@ -28,7 +28,7 @@ $border-dark: #453351;
 
 /* ---------- Academic Pages variables ---------- */
 
-:html[data-theme="dark"]{
+html[data-theme="dark"] {
   --global-base-color: #{$primary-color};
 
   --global-bg-color: #{$background};
