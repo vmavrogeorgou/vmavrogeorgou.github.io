@@ -1,74 +1,221 @@
 /* ==========================================================================
-  PURPLE THEME - LIGHT GRADIENT VERSION
-  ========================================================================== */
-/* Color codes used for the theme */
-$primary-color              : #7b1fa2; /* Vibrant Purple for main accents */
-$dark-primary-color         : mix(#000, $primary-color, 40%);
-$darker-primary-color       : mix(#000, $primary-color, 60%);
-$light-primary-color        : mix(#fff, $primary-color, 50%);
-$lighter-primary-color      : mix(#fff, $primary-color, 90%);
-$background                 : #e6e6fa; /* Soft Lilac Base */
-$background-light           : #ffffff;
-$background-lighter        : #f3e5f5; /* Very soft pastel lilac */
-$text                      : #212121; /* Off-black text for readability */
-$text-muted                : #4a148c; /* Muted deep violet text */
-$link                      : #7b1fa2; /* Purple links */
-$link-dark                 : #ba55d3; /* Medium Orchid on hover */
-$link-light                : mix(#fff, $link, 25%);
-$footer                    : #f3e5f5; /* Soft pastel lilac footer */
-$border                    : mix(#fff, #212121, 75%);
-$border-dark               : mix(#fff, #212121, 60%);
+   CUSTOM LIGHT PURPLE THEME
+   ========================================================================== */
 
-/* Color codes used for the site */
-$danger-color               : #e74c3c;
-$info-color                 : #7b1fa2;
-$notice-color               : #ba55d3;
-$success-color              : #2ecc71;
-$warning-color              : #f39c12;
+/* ---------- Theme colours ---------- */
 
-/* Other basic settings for the template */
-$border-radius              : 4px;
-$box-shadow                 : 0 1px 1px rgba(0, 0, 0, 0.125);
-$global-transition          : all 0.2s ease-in-out;
-$masthead-height            : 70px;
-$navicon-width              : 28px;
-$navicon-height             : 4px;
-$sidebar-link-max-width     : 250px;
-$sidebar-screen-min-width   : 1024px;
+$primary-color: #7b1fa2;
+$dark-primary-color: #5e177d;
+$darker-primary-color: #43105b;
+$light-primary-color: #a95bc5;
 
-/* Light theme for the site */
+$background: #faf9fd;
+$background-light: #ffffff;
+$background-lighter: #f3eff8;
+
+$text: #242027;
+$text-muted: #62586a;
+
+$link: #7b1fa2;
+$link-dark: #a33cc2;
+$link-light: #9a5aaa;
+
+$footer: #f5f2f8;
+
+$border: #ddd6e3;
+$border-dark: #c9c0d1;
+
+
+/* ---------- Academic Pages variables ---------- */
+
 :root {
-  --global-base-color                 : #{$primary-color};
-  --global-bg-color                   : #{$background};
-  --global-footer-bg-color            : #{$footer};
-  --global-border-color               : #{$border};
-  --global-dark-border-color          : #{$border-dark};
-  --global-code-background-color      : #{$background-light};
-  --global-code-text-color            : #{$darker-primary-color};
-  --global-fig-caption-color          : #{$text-muted};
-  --global-link-color                 : #{$link};
-  --global-link-color-hover           : #{$link-dark};
-  --global-link-color-visited         : #{$link-light};
-  --global-masthead-link-color        : #{$text};
-  --global-masthead-link-color-hover  : #{$primary-color};
-  --global-text-color                 : #{$text};
-  --global-text-color-light           : #{$text-muted};
-  --global-thead-color                : #{$lighter-primary-color};
+  --global-base-color: #{$primary-color};
+
+  --global-bg-color: #{$background};
+
+  --global-footer-bg-color: #{$footer};
+
+  --global-border-color: #{$border};
+  --global-dark-border-color: #{$border-dark};
+
+  --global-code-background-color: #{$background-light};
+  --global-code-text-color: #{$darker-primary-color};
+
+  --global-fig-caption-color: #{$text-muted};
+
+  --global-link-color: #{$link};
+  --global-link-color-hover: #{$link-dark};
+  --global-link-color-visited: #{$link-light};
+
+  --global-masthead-link-color: #{$text};
+  --global-masthead-link-color-hover: #{$primary-color};
+
+  --global-text-color: #{$text};
+  --global-text-color-light: #{$text-muted};
+
+  --global-thead-color: #{$background-lighter};
 }
 
-footer {
-  color: #{$text-muted};
-}
 
 /* ==========================================================================
-   VERTICAL GRADIENT INJECTION
+   PAGE BACKGROUND
    ========================================================================== */
+
+html,
 body {
-  background: linear-gradient(to bottom, #e6e6fa 0%, #ffffff 100%) !important;
-  background-attachment: fixed !important;
+  background: #faf9fd !important;
 }
 
-/* Keeps content containers completely seamless over the background */
-.page__content, .sidebar, .archive, .wrapper, .masthead {
+body {
+  background:
+    radial-gradient(
+      circle at 15% 0%,
+      rgba(123, 31, 162, 0.07),
+      transparent 35%
+    ),
+    linear-gradient(
+      180deg,
+      #f3eff8 0%,
+      #faf9fd 55%,
+      #ffffff 100%
+    ) !important;
+
+  background-attachment: fixed !important;
+  color: $text !important;
+}
+
+
+/* ==========================================================================
+   MAIN STRUCTURAL AREAS
+   ========================================================================== */
+
+.page,
+.page__content,
+.sidebar,
+.archive,
+.wrapper {
   background: transparent !important;
+  color: $text !important;
+}
+
+
+/* ==========================================================================
+   NAVIGATION
+   ========================================================================== */
+
+.masthead {
+  background: rgba(250, 249, 253, 0.92) !important;
+  border-bottom: 1px solid $border !important;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.masthead__menu-item a {
+  color: $text !important;
+}
+
+.masthead__menu-item a:hover {
+  color: $primary-color !important;
+}
+
+.masthead__menu-item--active a {
+  color: $primary-color !important;
+  border-bottom: 2px solid $primary-color !important;
+}
+
+
+/* ==========================================================================
+   HEADINGS
+   ========================================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $primary-color !important;
+}
+
+
+/* ==========================================================================
+   BODY TEXT
+   ========================================================================== */
+
+body,
+p,
+li,
+.page__content {
+  color: $text !important;
+}
+
+
+/* ==========================================================================
+   LINKS
+   ========================================================================== */
+
+a {
+  color: $link !important;
+
+  &:hover {
+    color: $link-dark !important;
+  }
+}
+
+
+/* ==========================================================================
+   SIDEBAR
+   ========================================================================== */
+
+.sidebar {
+  color: $text !important;
+}
+
+.author__name,
+.sidebar__user-name {
+  color: $primary-color !important;
+}
+
+
+/* ==========================================================================
+   CODE / BLOCKQUOTES
+   ========================================================================== */
+
+code,
+pre,
+blockquote {
+  background: $background-light !important;
+  border: 1px solid $border !important;
+  color: $text !important;
+}
+
+
+/* ==========================================================================
+   TABLES
+   ========================================================================== */
+
+thead {
+  background: $background-lighter !important;
+  color: $text !important;
+}
+
+th,
+td {
+  border-color: $border !important;
+}
+
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+
+.page__footer {
+  background: $footer !important;
+  color: $text-muted !important;
+  border-top: 1px solid $border !important;
+}
+
+.page__footer a {
+  color: $link !important;
 }
