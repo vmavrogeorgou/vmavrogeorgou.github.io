@@ -24,8 +24,8 @@ repository               : "vmavrogeorgou/vmavrogeorgou.github.io"
 author:
   # Biographic information
   avatar           : "profile.png"
-  name             : "Vasiliki Mavrogeorgou"
-  pronouns         : "she/her"  
+  name             : # "Vasiliki Mavrogeorgou"
+  pronouns         : # "she/her"  
   bio              : #""
   location         : "LSK 310, Institute of Applied Math"
   employer         : "University of British Columbia"
