@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-Hi, everyone! My name's Vasiliki and I'm a final year MSc student in the [Department of Mathematics](https://www.math.ubc.ca/) at the [University of British Columbia](https://www.ubc.ca/). I'm incredibly fortunate to be advised by [Prof. Ahmet Alaçaoglu](https://ahmetalacaoglu.github.io/), focusing on the theory and behavior behind optimization algorithms. I am also a member of the [Institute of Applied Mathematics](https://www.iam.ubc.ca/).
+Hi, everyone! I'm a final year MSc student in the [Department of Mathematics](https://www.math.ubc.ca/) at the [University of British Columbia](https://www.ubc.ca/). I'm incredibly fortunate to be advised by [Prof. Ahmet Alaçaoglu](https://ahmetalacaoglu.github.io/), focusing on the theory and behavior behind optimization algorithms. I am also a member of the [Institute of Applied Mathematics](https://www.iam.ubc.ca/).
 
 <!-- This is the front page of a website that is powered by the [Academic Pages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the repository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. Incidentally, these same features make it a great template for anyone that needs to show off a professional template!
 
