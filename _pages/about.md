@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Vasiliki's webpage: Thanks for stopping by!"
+title: "Vasiliki Mavrogeorgou"
 author_profile: true
 redirect_from: 
   - /about/
