@@ -1,0 +1,37 @@
+/* ==========================================================================
+   Custom Purple Theme Skin
+   ========================================================================== */
+
+/* Theme Colors */
+$main-color:        #e6e6fa !default; /* Soft Lilac */
+$primary-color:     #7b1fa2 !default; /* Vibrant Purple for main accents */
+$text-color:        #212121 !default;
+$inverse-text-color:#ffffff !default;
+$link-color:        #7b1fa2 !default; /* Purple links */
+$link-color-hover:  #ba55d3 !default;
+
+/* Border & Accent Colors */
+$border-color:      #e1bee7 !default;
+$masthead-link-color: $text-color !default;
+$masthead-link-color-hover: $primary-color !default;
+
+/* INJECT GRADIENT BACKGROUND DIRECTLY INTO THE SKIN */
+body {
+  background: linear-gradient(to bottom, #e6e6fa 0%, #ffffff 100%) !important;
+  background-attachment: fixed !important;
+}
+
+/* Ensure layouts look seamless on top of the gradient */
+.page__content, .sidebar {
+  background: transparent !important;
+}
+
+/* Footer Colors */
+.page__footer {
+  background-color: #f3e5f5 !important;
+  color: #4a148c !important;
+  
+  a {
+    color: #7b1fa2 !important;
+  }
+}
