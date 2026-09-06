@@ -1,102 +1,219 @@
 /* ==========================================================================
-  PURPLE THEME - DARK GRADIENT VERSION
-  ========================================================================== */
-/* Color codes used for the theme */
-$primary-color              : #bb86fc; /* Vibrant Neon Lilac for main accents/headings */
-$dark-primary-color         : mix(#000, $primary-color, 40%);
-$darker-primary-color       : mix(#000, $primary-color, 60%);
-$light-primary-color        : mix(#fff, $primary-color, 50%);
-$lighter-primary-color      : #2d1f47; /* Dark purple background highlight for table headers */
-$background                 : #120c1f; /* Deep Obsidian Violet background base */
-$background-light           : #1d1430; /* Darker accent container block background */
-$background-lighter        : #160f24;
-$text                      : #e0e0e0; /* Soft crisp off-white for main text readability */
-$text-muted                : #a093b1; /* Muted slate purple text */
-$link                      : #da70d6; /* Orchid Purple for hyperlinks */
-$link-dark                 : #ffb7ff; /* Bright pastel pinkish-lilac on hover */
-$link-light                : mix(#fff, $link, 25%);
-$footer                    : #09050e; /* Deep dark obsidian footer */
-$border                    : #2d1f47; /* Muted dark purple borders */
-$border-dark               : mix(#fff, #120c1f, 20%);
+   CUSTOM DARK PURPLE THEME
+   ========================================================================== */
 
-/* Color codes used for the site */
-$danger-color               : #e74c3c;
-$info-color                 : #bb86fc;
-$notice-color               : #da70d6;
-$success-color              : #2ecc71;
-$warning-color              : #f39c12;
+/* ---------- Theme colours ---------- */
 
-/* Other basic settings for the template */
-$border-radius              : 4px;
-$box-shadow                 : 0 1px 1px rgba(0, 0, 0, 0.5);
-$global-transition          : all 0.2s ease-in-out;
-$masthead-height            : 70px;
-$navicon-width              : 28px;
-$navicon-height             : 4px;
-$sidebar-link-max-width     : 250px;
-$sidebar-screen-min-width   : 1024px;
+$primary-color: #bb86fc;
+$dark-primary-color: #8f5cc4;
+$darker-primary-color: #6f429f;
+$light-primary-color: #d7b7ff;
 
-/* Dark theme variables for the site engine */
+$background: #100b18;
+$background-light: #191125;
+$background-lighter: #211631;
+
+$text: #eeeaf4;
+$text-muted: #aaa0b8;
+
+$link: #d18cff;
+$link-dark: #efb6ff;
+$link-light: #ddb0ff;
+
+$footer: #0a0710;
+
+$border: #30233d;
+$border-dark: #453351;
+
+
+/* ---------- Academic Pages variables ---------- */
+
 :root {
-  --global-base-color                 : #{$primary-color};
-  --global-bg-color                   : #{$background};
-  --global-footer-bg-color            : #{$footer};
-  --global-border-color               : #{$border};
-  --global-dark-border-color          : #{$border-dark};
-  --global-code-background-color      : #{$background-light};
-  --global-code-text-color            : #{$text};
-  --global-fig-caption-color          : #{$text-muted};
-  --global-link-color                 : #{$link};
-  --global-link-color-hover           : #{$link-dark};
-  --global-link-color-visited         : #{$link-light};
-  --global-masthead-link-color        : #{$text};
-  --global-masthead-link-color-hover  : #{$primary-color};
-  --global-text-color                 : #{$text};
-  --global-text-color-light           : #{$text-muted};
-  --global-thead-color                : #{$lighter-primary-color};
+  --global-base-color: #{$primary-color};
+
+  --global-bg-color: #{$background};
+
+  --global-footer-bg-color: #{$footer};
+
+  --global-border-color: #{$border};
+  --global-dark-border-color: #{$border-dark};
+
+  --global-code-background-color: #{$background-light};
+  --global-code-text-color: #{$text};
+
+  --global-fig-caption-color: #{$text-muted};
+
+  --global-link-color: #{$link};
+  --global-link-color-hover: #{$link-dark};
+  --global-link-color-visited: #{$link-light};
+
+  --global-masthead-link-color: #{$text};
+  --global-masthead-link-color-hover: #{$primary-color};
+
+  --global-text-color: #{$text};
+  --global-text-color-light: #{$text-muted};
+
+  --global-thead-color: #{$background-lighter};
 }
 
-footer {
-  color: #{$text-muted};
-}
 
 /* ==========================================================================
-   VERTICAL DARK GRADIENT INJECTION & CONTRAST FIXES
+   PAGE BACKGROUND
    ========================================================================== */
+
+html,
 body {
-  background: linear-gradient(to bottom, #160f24 0%, #0d0814 100%) !important;
+  background: #100b18 !important;
+}
+
+body {
+  background:
+    linear-gradient(
+      180deg,
+      #211332 0%,
+      #160d23 35%,
+      #100b18 75%,
+      #0b0710 100%
+    ) !important;
+
   background-attachment: fixed !important;
-  color: #e0e0e0 !important;
+
+  color: $text !important;
 }
 
-/* Forces structural components to blend seamlessly into the dark gradient */
-.page__content, .sidebar, .archive, .wrapper, .masthead, .page__footer {
+
+/* ==========================================================================
+   MAIN STRUCTURAL AREAS
+   ========================================================================== */
+
+.page,
+.page__content,
+.sidebar,
+.archive,
+.wrapper {
   background: transparent !important;
-  color: #e0e0e0 !important;
+  color: $text !important;
 }
 
-/* Ensures titles and sidebar user names use your bright neon accent color */
-h1, h2, h3, h4, h5, h6, .sidebar__user-name, .author__name, .masthead__menu-item a {
-  color: #bb86fc !important;
+
+/* ==========================================================================
+   NAVIGATION
+   ========================================================================== */
+
+.masthead {
+  background: rgba(16, 11, 24, 0.92) !important;
+  border-bottom: 1px solid $border !important;
+
+  /* Gives the navbar a slight glass effect */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
-/* Overrides links globally to ensure dark visibility */
+.masthead__menu-item a {
+  color: $text !important;
+}
+
+.masthead__menu-item a:hover {
+  color: $primary-color !important;
+}
+
+.masthead__menu-item--active a {
+  color: $primary-color !important;
+  border-bottom: 2px solid $primary-color !important;
+}
+
+
+/* ==========================================================================
+   HEADINGS
+   ========================================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $primary-color !important;
+}
+
+
+/* ==========================================================================
+   BODY TEXT
+   ========================================================================== */
+
+body,
+p,
+li,
+.page__content {
+  color: $text !important;
+}
+
+
+/* ==========================================================================
+   LINKS
+   ========================================================================== */
+
 a {
-  color: #da70d6 !important;
+  color: $link !important;
+
   &:hover {
-    color: #ffb7ff !important;
+    color: $link-dark !important;
   }
 }
 
-/* Custom styles for your code blocks and blockquotes */
-code, pre, blockquote {
-  background-color: #1d1430 !important;
-  border: 1px solid #3c2b5c !important;
-  color: #e0e0e0 !important;
+
+/* ==========================================================================
+   SIDEBAR
+   ========================================================================== */
+
+.sidebar {
+  color: $text !important;
 }
 
-/* Highlights the active page underline on your navigation bar */
-.masthead__menu-item--active a,
-.masthead__menu-item a:hover {
-  border-bottom: 2px solid #da70d6 !important;
+.author__name,
+.sidebar__user-name {
+  color: $primary-color !important;
+}
+
+
+/* ==========================================================================
+   CODE / BLOCKQUOTES
+   ========================================================================== */
+
+code,
+pre,
+blockquote {
+  background: $background-light !important;
+  border: 1px solid $border !important;
+  color: $text !important;
+}
+
+
+/* ==========================================================================
+   TABLES
+   ========================================================================== */
+
+thead {
+  background: $background-lighter !important;
+  color: $text !important;
+}
+
+th,
+td {
+  border-color: $border !important;
+}
+
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+
+.page__footer {
+  background: $footer !important;
+  color: $text-muted !important;
+  border-top: 1px solid $border !important;
+}
+
+.page__footer a {
+  color: $link !important;
 }
