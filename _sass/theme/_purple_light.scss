@@ -75,11 +75,9 @@ $sidebar-screen-min-width   : 1024px;
 
 html,
 body {
-    background: #faf9fd !important;
-}
+    background-color: var(--global-bg-color);
 
-body {
-    background:
+    background-image:
         radial-gradient(
             circle at 15% 0%,
             rgba(123, 31, 162, 0.07),
@@ -90,9 +88,9 @@ body {
             #f3eff8 0%,
             #faf9fd 55%,
             #ffffff 100%
-        ) !important;
+        );
 
-    background-attachment: fixed !important;
+    background-attachment: fixed;
 }
 
 
