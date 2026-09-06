@@ -1,60 +1,102 @@
 /* ==========================================================================
-   Custom Dark Purple Theme Skin
+  PURPLE THEME - DARK GRADIENT VERSION
+  ========================================================================== */
+/* Color codes used for the theme */
+$primary-color              : #bb86fc; /* Vibrant Neon Lilac for main accents/headings */
+$dark-primary-color         : mix(#000, $primary-color, 40%);
+$darker-primary-color       : mix(#000, $primary-color, 60%);
+$light-primary-color        : mix(#fff, $primary-color, 50%);
+$lighter-primary-color      : #2d1f47; /* Dark purple background highlight for table headers */
+$background                 : #120c1f; /* Deep Obsidian Violet background base */
+$background-light           : #1d1430; /* Darker accent container block background */
+$background-lighter        : #160f24;
+$text                      : #e0e0e0; /* Soft crisp off-white for main text readability */
+$text-muted                : #a093b1; /* Muted slate purple text */
+$link                      : #da70d6; /* Orchid Purple for hyperlinks */
+$link-dark                 : #ffb7ff; /* Bright pastel pinkish-lilac on hover */
+$link-light                : mix(#fff, $link, 25%);
+$footer                    : #09050e; /* Deep dark obsidian footer */
+$border                    : #2d1f47; /* Muted dark purple borders */
+$border-dark               : mix(#fff, #120c1f, 20%);
+
+/* Color codes used for the site */
+$danger-color               : #e74c3c;
+$info-color                 : #bb86fc;
+$notice-color               : #da70d6;
+$success-color              : #2ecc71;
+$warning-color              : #f39c12;
+
+/* Other basic settings for the template */
+$border-radius              : 4px;
+$box-shadow                 : 0 1px 1px rgba(0, 0, 0, 0.5);
+$global-transition          : all 0.2s ease-in-out;
+$masthead-height            : 70px;
+$navicon-width              : 28px;
+$navicon-height             : 4px;
+$sidebar-link-max-width     : 250px;
+$sidebar-screen-min-width   : 1024px;
+
+/* Dark theme variables for the site engine */
+:root {
+  --global-base-color                 : #{$primary-color};
+  --global-bg-color                   : #{$background};
+  --global-footer-bg-color            : #{$footer};
+  --global-border-color               : #{$border};
+  --global-dark-border-color          : #{$border-dark};
+  --global-code-background-color      : #{$background-light};
+  --global-code-text-color            : #{$text};
+  --global-fig-caption-color          : #{$text-muted};
+  --global-link-color                 : #{$link};
+  --global-link-color-hover           : #{$link-dark};
+  --global-link-color-visited         : #{$link-light};
+  --global-masthead-link-color        : #{$text};
+  --global-masthead-link-color-hover  : #{$primary-color};
+  --global-text-color                 : #{$text};
+  --global-text-color-light           : #{$text-muted};
+  --global-thead-color                : #{$lighter-primary-color};
+}
+
+footer {
+  color: #{$text-muted};
+}
+
+/* ==========================================================================
+   VERTICAL DARK GRADIENT INJECTION & CONTRAST FIXES
    ========================================================================== */
-
-/* Dark Mode Theme Colors */
-$main-color:        #120c1f !default; /* Deep Obsidian Violet background base */
-$primary-color:     #bb86fc !default; /* Vibrant Neon Lilac for main accents/headings */
-$text-color:        #e0e0e0 !default; /* Soft crisp off-white for body text readability */
-$inverse-text-color:#120c1f !default;
-$link-color:        #da70d6 !default; /* Orchid Purple for hyperlinks */
-$link-color-hover:  #ffb7ff !default; /* Bright pastel pinkish-lilac on hover */
-
-/* Border & Component Colors */
-$border-color:      #2d1f47 !default; /* Muted dark purple borders */
-$masthead-link-color: $text-color !default;
-$masthead-link-color-hover: $primary-color !default;
-
-/* INJECT VERTICAL DARK GRADIENT BACKGROUND */
 body {
   background: linear-gradient(to bottom, #160f24 0%, #0d0814 100%) !important;
   background-attachment: fixed !important;
-  color: $text-color !important;
+  color: #e0e0e0 !important;
 }
 
-/* Ensure background containers blend into the dark gradient */
-.page__content, .sidebar, .archive, .wrapper, .masthead {
+/* Forces structural components to blend seamlessly into the dark gradient */
+.page__content, .sidebar, .archive, .wrapper, .masthead, .page__footer {
   background: transparent !important;
-  color: $text-color !important;
+  color: #e0e0e0 !important;
 }
 
-/* Fix global headings to use your neon accent color */
-h1, h2, h3, h4, h5, h6, .sidebar__user-name, .author__name {
+/* Ensures titles and sidebar user names use your bright neon accent color */
+h1, h2, h3, h4, h5, h6, .sidebar__user-name, .author__name, .masthead__menu-item a {
   color: #bb86fc !important;
 }
 
-/* Dark Footer Styling */
-.page__footer {
-  background-color: #09050e !important;
-  color: #a093b1 !important;
-  border-top: 1px solid #2d1f47 !important;
-  
-  a {
-    color: #bb86fc !important;
-    &:hover { color: #ffb7ff !important; }
+/* Overrides links globally to ensure dark visibility */
+a {
+  color: #da70d6 !important;
+  &:hover {
+    color: #ffb7ff !important;
   }
 }
 
-/* Subtle accent background for blockquotes / code blocks */
+/* Custom styles for your code blocks and blockquotes */
 code, pre, blockquote {
   background-color: #1d1430 !important;
   border: 1px solid #3c2b5c !important;
   color: #e0e0e0 !important;
 }
 
-/* Changes the active page highlight item in the header navigation menu */
+/* Highlights the active page underline on your navigation bar */
 .masthead__menu-item--active a,
 .masthead__menu-item a:hover {
-  color: #bb86fc !important;
   border-bottom: 2px solid #da70d6 !important;
 }
