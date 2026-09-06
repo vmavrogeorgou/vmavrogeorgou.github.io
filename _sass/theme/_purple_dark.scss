@@ -74,11 +74,9 @@ html[data-theme="dark"] {
 
 html[data-theme="dark"],
 html[data-theme="dark"] body {
-    background: #100b18 !important;
-}
+    background-color: var(--global-bg-color);
 
-html[data-theme="dark"] body {
-    background:
+    background-image:
         radial-gradient(
             circle at 15% 0%,
             rgba(187, 134, 252, 0.10),
@@ -89,9 +87,9 @@ html[data-theme="dark"] body {
             #181020 0%,
             #100b18 55%,
             #0b0710 100%
-        ) !important;
+        );
 
-    background-attachment: fixed !important;
+    background-attachment: fixed;
 }
 
 
