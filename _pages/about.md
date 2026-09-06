@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Thanks for stopping by!"
+title: "Vasiliki's webpage: Thanks for stopping by!"
 author_profile: true
 redirect_from: 
   - /about/
