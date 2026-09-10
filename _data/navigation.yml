@@ -21,7 +21,7 @@ main:
     #url: /portfolio/
         
   - title: "A penny for my thoughts"
-    #url: /year-archive/
+    url: /year-archive/
     
   #- title: "CV"
     #url: /cv/
