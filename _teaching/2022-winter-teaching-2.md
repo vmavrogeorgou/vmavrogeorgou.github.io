@@ -4,9 +4,9 @@ collection: teaching
 type: "Lab"
 permalink: /teaching/2022-winter-teaching-1/
 venue: "University of Athens, Department of Mathematics"
-date: "Jan 2022 - Feb 2024"
+date: 2022-01-01
 location: "Athens, Greece"
 ---
-
+(2022 - 2024)
 - Coordinated and instructed lab sessions, managing an expanded computer lab for 2023-24 academic year.
 - 4.944/5 total quality score after assessment; Highest scoring instructor among 7 Labs.
