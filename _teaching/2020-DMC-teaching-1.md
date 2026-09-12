@@ -5,6 +5,7 @@ type: "Math Club for elementary school students"
 permalink: /teaching/2020-DMC-teaching-1
 venue: "Doukas School"
 date: 2020-10-01
+end_date: 2024-05-31
 location: "Athens, Greece"
 ---
 
