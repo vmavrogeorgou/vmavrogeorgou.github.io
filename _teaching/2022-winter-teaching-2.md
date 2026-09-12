@@ -2,10 +2,9 @@
 title: "MATLAB Teaching Assistant"
 collection: teaching
 type: "Lab"
-permalink: /teaching/2022-winter-teaching-1
+permalink: /teaching/2022-winter-teaching-1/
 venue: "University of Athens, Department of Mathematics"
-date: 2022-01-01
-end_date: 2024-06-01
+date: "Jan 2022 - Feb 2024"
 location: "Athens, Greece"
 ---
 
