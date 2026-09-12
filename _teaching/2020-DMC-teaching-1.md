@@ -2,7 +2,7 @@
 title: "Math Club Instructor"
 collection: teaching
 type: "Math Club for elementary school students"
-permalink: /teaching/2020-DMC-teaching-1/
+permalink: /teaching/
 venue: "Doukas School"
 date: "Oct 2020 - May 2024"
 location: "Athens, Greece"
