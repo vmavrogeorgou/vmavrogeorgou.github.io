@@ -9,4 +9,4 @@ location: "Vancouver, Canada"
 ---
 (2025-2026)
 
-- Developed a LaTeX booklet compiling past papers and exercises for students to use in class, coordinating content and formatting under Prof. Walls' supervision.
+- Developed a LaTeX booklet compiling past papers and exercises for students to use in class, coordinating content and formatting under [Prof. Patrick Walls](https://patrickwalls.github.io)' supervision.
