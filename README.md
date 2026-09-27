@@ -1,4 +1,10 @@
-# Academic Pages
+# My Academic Website
+
+This repository contains the source code for my personal academic website, built using Jekyll and the Academic Pages template.
+
+View my live site here: [https://vmavrogeorgou.github.io/](https://vmavrogeorgou.github.io/)
+
+<!-- # Academic Pages
 **Academic Pages is a GitHub Pages template for personal and professional portfolio-oriented websites.**
 
 ![Academic Pages template example](images/themes/homepage-light.png "Academic Pages template example")
@@ -94,7 +100,7 @@ Unfortunately, one logistical issue with a template theme like Academic Pages th
 ![pages-build-deployment](https://github.com/academicpages/academicpages.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)
 [![GitHub contributors](https://img.shields.io/github/contributors/academicpages/academicpages.github.io.svg)](https://github.com/academicpages/academicpages.github.io/graphs/contributors)
 [![GitHub release](https://img.shields.io/github/v/release/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/releases/latest)
-[![GitHub license](https://img.shields.io/github/license/academicpages/academicpages.github.io?color=blue)](https://github.com/academicpages/academicpages.github.io/blob/master/LICENSE)
+[![GitHub license](https://img.shields.io/github/license/academicpages/academicpages.github.io?color=blue)] -->(https://github.com/academicpages/academicpages.github.io/blob/master/LICENSE)
 
 [![GitHub stars](https://img.shields.io/github/stars/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io)
 [![GitHub forks](https://img.shields.io/github/forks/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/fork)
