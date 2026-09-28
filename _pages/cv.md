@@ -7,10 +7,7 @@ redirect_from:
   - /resume
 ---
 
-
----
-
-
+Here you can find a more detailed version of my academic ["glowing briefcase ledger"] (a.k.a. my CV - hopefully it's not just light :) )
 
 {% include base_path %}
 
@@ -43,13 +40,13 @@ Skills
   * Sub-skill 2.1
   * Sub-skill 2.2
   * Sub-skill 2.3
-* Skill 3 -->
+* Skill 3 
 
 Publications
 ======
   <ul>{% for post in site.publications reversed %}
     {% include archive-single-cv.html %}
-  {% endfor %}</ul>
+  {% endfor %}</ul> -->
   
 <!--Talks
 ======
