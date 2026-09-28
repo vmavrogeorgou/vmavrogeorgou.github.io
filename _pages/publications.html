@@ -1,7 +1,7 @@
 ---
 layout: archive
-title: "Publications"
-permalink: /publications/
+title: "Research"
+permalink: /research/
 author_profile: true
 ---
 
@@ -45,13 +45,13 @@ author_profile: true
         {% endif %}
 
         {% if post.authors %}
-          <p class="publication-authors">
+          <div class="publication-authors">
             {{ post.authors }}
-          </p>
+          </div>
         {% endif %}
 
         {% if post.venue or post.date %}
-          <p class="publication-venue">
+          <div class="publication-venue">
             {% if post.venue %}
               <i>{{ post.venue }}</i>
             {% endif %}
@@ -59,7 +59,7 @@ author_profile: true
             {% if post.date %}
               {{ post.date | date: "%Y" }}
             {% endif %}
-          </p>
+          </div>
         {% endif %}
 
       </div>
@@ -86,13 +86,13 @@ author_profile: true
       {% endif %}
 
       {% if post.authors %}
-        <p class="publication-authors">
+        <div class="publication-authors">
           {{ post.authors }}
-        </p>
+        </div>
       {% endif %}
 
       {% if post.venue or post.date %}
-        <p class="publication-venue">
+        <div class="publication-venue">
           {% if post.venue %}
             <i>{{ post.venue }}</i>
           {% endif %}
@@ -100,7 +100,7 @@ author_profile: true
           {% if post.date %}
             {{ post.date | date: "%Y" }}
           {% endif %}
-        </p>
+        </div>
       {% endif %}
 
     </div>
