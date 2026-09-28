@@ -6,13 +6,126 @@ author_profile: true
 ---
 
 {% if site.author.googlescholar %}
+  <div class="wordwrap">
+    Here's <a href="{{ site.author.googlescholar }}" target="_blank" rel="noopener noreferrer">my Google Scholar profile</a>.
+  </div>
+{% endif %}
+
+{% include base_path %}
+
+{% if site.publication_category %}
+
+  {% for category in site.publication_category %}
+    {% assign title_shown = false %}
+
+    {% for post in site.publications reversed %}
+
+      {% if post.category != category[0] %}
+        {% continue %}
+      {% endif %}
+
+      {% unless title_shown %}
+        <h2>{{ category[1].title }}</h2>
+        <hr />
+        {% assign title_shown = true %}
+      {% endunless %}
+
+      <div class="publication-item">
+
+        {% if post.paperurl %}
+          <h3 class="publication-title">
+            <a href="{{ post.paperurl }}" target="_blank" rel="noopener noreferrer">
+              {{ post.title }}
+            </a>
+          </h3>
+        {% else %}
+          <h3 class="publication-title">
+            {{ post.title }}
+          </h3>
+        {% endif %}
+
+        {% if post.authors %}
+          <p class="publication-authors">
+            {{ post.authors }}
+          </p>
+        {% endif %}
+
+        {% if post.venue or post.date %}
+          <p class="publication-venue">
+            {% if post.venue %}
+              <i>{{ post.venue }}</i>
+            {% endif %}
+            {% if post.venue and post.date %}, {% endif %}
+            {% if post.date %}
+              {{ post.date | date: "%Y" }}
+            {% endif %}
+          </p>
+        {% endif %}
+
+      </div>
+
+    {% endfor %}
+  {% endfor %}
+
+{% else %}
+
+  {% for post in site.publications reversed %}
+
+    <div class="publication-item">
+
+      {% if post.paperurl %}
+        <h3 class="publication-title">
+          <a href="{{ post.paperurl }}" target="_blank" rel="noopener noreferrer">
+            {{ post.title }}
+          </a>
+        </h3>
+      {% else %}
+        <h3 class="publication-title">
+          {{ post.title }}
+        </h3>
+      {% endif %}
+
+      {% if post.authors %}
+        <p class="publication-authors">
+          {{ post.authors }}
+        </p>
+      {% endif %}
+
+      {% if post.venue or post.date %}
+        <p class="publication-venue">
+          {% if post.venue %}
+            <i>{{ post.venue }}</i>
+          {% endif %}
+          {% if post.venue and post.date %}, {% endif %}
+          {% if post.date %}
+            {{ post.date | date: "%Y" }}
+          {% endif %}
+        </p>
+      {% endif %}
+
+    </div>
+
+  {% endfor %}
+
+{% endif %}
+
+<!--
+
+---
+layout: archive
+title: "Publications"
+permalink: /publications/
+author_profile: true
+---
+
+{% if site.author.googlescholar %}
   <div class="wordwrap">Here's <a href="{{site.author.googlescholar}}" target="_blank" rel="noopener noreferrer">my Google Scholar profile</a>.</div>
 {% endif %}
 
 {% include base_path %}
 
 <!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
+<!--{% if site.publication_category %}
   {% for category in site.publication_category  %}
     {% assign title_shown = false %}
     {% for post in site.publications reversed %}
@@ -31,6 +144,4 @@ author_profile: true
     {% include archive-single.html %}
   {% endfor %}
 {% endif %}
-
-
 
