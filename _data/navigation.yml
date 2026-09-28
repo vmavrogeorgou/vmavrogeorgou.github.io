@@ -11,6 +11,9 @@ main:
 
   - title: "About"
     url: /
+
+  - title: "CV"
+    url: /cv/
     
   - title: "Teaching"
     url: /teaching/ 
@@ -26,9 +29,6 @@ main:
         
   - title: "A penny for my thoughts"
     url: /year-archive/
-    
-  #- title: "CV"
-    #url: /cv/
     
   # - title: "CV"
   #   url: /cv-json/
